@@ -24,7 +24,7 @@ public class BJ1389_케빈베이컨의6단계법칙 {
 		dist = new int[n+1];
 		
 		for(int i = 1; i <= n; i++) {
-			dist[i] = dfs(i);
+			dist[i] = bfs(i);
 		}
 		
 		int min = Integer.MAX_VALUE;
@@ -41,7 +41,7 @@ public class BJ1389_케빈베이컨의6단계법칙 {
 		
 	}
 
-	private static int dfs(int idx) {
+	private static int bfs(int idx) {
 		Queue<Integer> queue = new LinkedList<>();
 		Queue<Integer> tmpQueue = new LinkedList<>();
 		visited = new boolean[n+1];
